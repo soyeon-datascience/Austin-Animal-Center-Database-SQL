@@ -1,0 +1,42 @@
+<mat-card>
+<div class="container">
+  <div id="leftbox" *ngIf="isinsertapplicable()">
+    <button mat-raised-button (click)="openDialog()">Insert new row</button>
+  </div>
+
+  <div id="rightbox">
+
+    <!-- <form class="form" > -->
+      <mat-form-field class="searchBoxes" *ngFor="let key of objectKeys(toSearchColumns)">
+        <input
+        (keyup.enter)="search(key)"
+        #model="ngModel" [(ngModel)]="userEnteredValues[key]"
+        matInput
+        type="text"
+        [placeholder]="toSearchColumns[key]"
+        class="search-input">
+        <mat-datepicker-toggle *ngIf="key !== 'animal_id'" matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-hint  *ngIf="key !== 'animal_id'" align="start">Format: (YYYY-MM-DD)</mat-hint>
+        <button mat-button matSuffix mat-icon-button (click)="search(key)">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" style="margin-left: 1rem;" (click)="seeAll()">
+        See All
+      </button>
+    <!-- </form> -->
+    <!-- <form class="form">
+      <mat-form-field>
+        <input matInput type="text" placeholder="Search" class="search-input">
+        <button mat-button matSuffix mat-icon-button (keyup.enter)="search('')">
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+    </form> -->
+
+  </div>
+
+</div>
+
+</mat-card>

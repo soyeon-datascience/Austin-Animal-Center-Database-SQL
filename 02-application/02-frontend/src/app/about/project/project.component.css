@@ -1,0 +1,12 @@
+.project-container {
+    color: black;
+    width: 95%;
+    height: 95%;
+    padding: 1rem;
+}
+.header{
+    font-size: larger;
+}
+.body-size{
+    font-size: medium;
+}

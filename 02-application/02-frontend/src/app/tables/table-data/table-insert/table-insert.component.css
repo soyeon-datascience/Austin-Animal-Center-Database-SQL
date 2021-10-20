@@ -1,0 +1,7 @@
+.mat-dialog-content {
+  overflow-y: hidden !important;
+}
+
+.insertInputs {
+  display: block;
+}

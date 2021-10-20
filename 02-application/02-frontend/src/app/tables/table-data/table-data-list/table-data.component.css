@@ -1,0 +1,28 @@
+/* Structure */
+.mat-table {
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+.mat-header-cell {
+  margin-bottom: 0;
+}
+
+.mat-cell,
+.mat-header-cell {
+  word-wrap: break-word;
+  display: table-cell;
+  padding: 0px 10px;
+  /* line-break: unset; */
+  width: 100%;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.myclass {
+  display: table-row;
+}
+
+mat-spinner {
+  margin: auto;
+}

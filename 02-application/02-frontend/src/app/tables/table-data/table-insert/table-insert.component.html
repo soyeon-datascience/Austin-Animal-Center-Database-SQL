@@ -1,0 +1,24 @@
+<button mat-icon-button class="close-button" (click)="close()">
+  <mat-icon class="close-icon" color="warn">close</mat-icon>
+</button>
+<h1 mat-dialog-title>{{ getTitle() }}</h1>
+<div mat-dialog-content>
+ <form class="form" [formGroup]="form" (submit)="submit()">
+  <mat-form-field class="insertInputs" *ngFor="let key of objectKeys(data.column_values)">
+    <input
+
+    matInput
+    type="text"
+    [formControlName]="key"
+    [placeholder]="key"
+    class="search-input">
+  <!-- <mat-hint *ngIf="key === 'animal_id_intake'" align="start">{{form.value.animal_id_intake.length || 0}} / 7</mat-hint> -->
+  <!-- <mat-hint  align="end"><strong>Data-type: {{ data.data_types[key] }}</strong></mat-hint> -->
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">
+        {{getButtonText()}}
+  </button>
+</form>
+</div>
+

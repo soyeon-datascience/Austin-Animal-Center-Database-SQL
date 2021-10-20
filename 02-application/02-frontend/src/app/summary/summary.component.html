@@ -1,0 +1,49 @@
+<div class="summary-component">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+<div class="summary"  *ngIf="!isLoading">
+<!-- Total animal count table -->
+<table mat-table [dataSource]="animalsCountdataSource" class="mat-elevation-z8 animals-count-table summary-tables">
+
+  <ng-container matColumnDef="animals_count">
+    <th mat-header-cell *matHeaderCellDef>Total Animals Count</th>
+    <td mat-cell *matCellDef="let element"> {{element.animals_count}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="animalsCountDisplayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: animalsCountDisplayedColumns;"></tr>
+</table>
+
+<mat-table [dataSource]="animalsTypeCountDataSource" class="mat-elevation-z8 summary-tables">
+    <ng-container [matColumnDef]="column" *ngFor="let column of animalsTypeCountDisplayedColumns">
+      <ng-container>
+        <mat-header-cell *matHeaderCellDef>{{column}}</mat-header-cell>
+      </ng-container>
+
+      <ng-container>
+        <mat-cell *matCellDef="let element">
+          {{ element[column] }}
+        </mat-cell>
+      </ng-container>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="animalsTypeCountDisplayedColumns;"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: animalsTypeCountDisplayedColumns"></mat-row>
+  </mat-table>
+
+  <mat-table [dataSource]="outcomeTypeCountDataSource" class="mat-elevation-z8 summary-tables">
+    <ng-container [matColumnDef]="column" *ngFor="let column of outcomeTypeCountDisplayedColumns">
+      <ng-container>
+        <mat-header-cell *matHeaderCellDef>{{column}}</mat-header-cell>
+      </ng-container>
+
+      <ng-container>
+        <mat-cell *matCellDef="let element">
+          {{ element[column] }}
+        </mat-cell>
+      </ng-container>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="outcomeTypeCountDisplayedColumns;"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: outcomeTypeCountDisplayedColumns"></mat-row>
+  </mat-table>
+
+</div>
+</div>

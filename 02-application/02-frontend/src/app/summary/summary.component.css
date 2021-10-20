@@ -1,0 +1,27 @@
+.summary-component {
+  width: 100%;
+  height: 100%;
+}
+
+.summary {
+  margin: auto;
+  padding: 1rem;
+
+}
+
+.animals-count-table {
+  width: 100%;
+  text-align: center;
+}
+
+th.mat-header-cell {
+  text-align: center !important;
+}
+
+mat-spinner {
+  margin: auto;
+}
+
+.summary-tables {
+  margin-bottom: 1rem;
+}

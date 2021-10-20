@@ -1,0 +1,51 @@
+<div class="data-container">
+    <mat-grid-list cols="2" rowHeight="50%">
+        <mat-grid-tile
+            [colspan]="2"
+            [rowspan]="1"
+            >
+            <img src="assets/data.png" alt=""  style="object-fit: cover; height: inherit; width: inherit;">
+        </mat-grid-tile>
+        <mat-grid-tile
+            [colspan]="1"
+            [rowspan]="1">
+        <div>
+        <h2>Data</h2>
+        <p class="mat-body-2">The data contains intakes and outcomes of animals entering the Austin Animal Center from the beginning of October 2013 to the present day.</p>
+        <p class="mat-body-2">For our database, we split the mega table into 4 tables : animal_info, in_out_mega, intake and outcome. The attribute explanation are as follows : </p>
+        <ul class ="mat-body-2">
+            <li>age_upon_outcome : The age of the animal upon outcome</li>
+            <li>animal_id_outcome :  The animal's outcome ID. Should match the intake ID column</li>
+            <li>date_of_birth : Date of birth of the animal. Estimated if exact birthdate is not known</li>
+            <li>outcome_type : The outcome type</li>
+            <li>outcome_subtype : More specific outcome type corresponding to the outcome type where appropriate</li>
+            <li>sex_upon_outcome : The gender of the animal and if it has been spayed or neutered at time of outcome</li>
+            <li>age_upon_outcome : The age of the animal upon outcome</li>
+            <li>age_upon_outcome_age_group : Grouped bins of the animal ages upon outcome. Goes by 2.5 year increments.</li>
+            <li>outcome_datetime :Date and time when the outcome occurred</li>
+        </ul>
+    </div>  
+    </mat-grid-tile>
+    <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="1">
+        <div>
+        <p class="mat-body-2">Copied from the description of the Shelter Outcomes dataset, here are some definitions of the outcome types:</p>
+        <ul class ="mat-body-2">
+            <li>Barn Adoption : the animal was adopted to live in a barn</li>
+            <li>Offsite Missing : the animal went missing for unknown reasons at an offsite partner location</li>
+            <li>In-Foster Missing : the animal is missing after being placed in a foster home</li>
+            <li>In-Kennel Missing : the animal is missing after being transferred to a kennel facility</li>
+            <li>Possible Theft : Although not confirmed, the animal went missing as a result of theft from the facility</li>
+            <li>Barn Transfer : The animal was transferred to a facility for adoption into a barn environment</li>
+            <li>SNR : SNR refers to the city of Austin's Shelter-Neuter-Release program. I believe the outcome is representative of the animal being released.</li>
+            <li>Adoption : the animal was adopted to a home</li>
+        </ul>
+    </div>  
+    </mat-grid-tile>
+    
+
+    </mat-grid-list>
+
+      
+</div>

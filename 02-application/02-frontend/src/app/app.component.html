@@ -1,0 +1,87 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+        menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+        close
+    </mat-icon>
+  </button>
+  <span><a routerLink="">Austin Animal Center - Database <span *ngIf="db_obj_name">/ {{ db_obj_name }}</span></a></span>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav class="mat-elevation-z8" #sidenav="matSidenav" >
+    <button mat-button class="menu-button" (click)="onMenuClicked('about')">
+      <mat-icon>info</mat-icon>
+      <span>About</span>
+    </button>
+    <button color="accent" (click)="navigate('/')"  mat-stroked-button class="sub-buttons" *ngIf="menuItemsClickedStatus['about']">
+      Home
+    </button>
+    <button color="accent" (click)="navigate('/data_about')"  mat-stroked-button class="sub-buttons" *ngIf="menuItemsClickedStatus['about']">
+      Data
+    </button>
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" (click)="onMenuClicked('tables')">
+      <mat-icon>table_rows</mat-icon>
+      <span>Tables</span>
+    </button>
+
+    <button color="accent" (click)="showTableData('in_out_mega')" mat-button class="sub-buttons" *ngIf="menuItemsClickedStatus['tables']">
+      Mega Table
+    </button>
+    <button color="accent" (click)="showTableData('animal_info')" mat-stroked-button class="sub-buttons" *ngIf="menuItemsClickedStatus['tables']">
+      Animal Info Table
+    </button>
+    <button color="accent" (click)="showTableData('intake')" mat-stroked-button class="sub-buttons" *ngIf="menuItemsClickedStatus['tables']">
+      Intake Info Table
+    </button>
+    <button color="accent" (click)="showTableData('outcome')" mat-stroked-button class="sub-buttons" *ngIf="menuItemsClickedStatus['tables']">
+      Outcome Info Table
+    </button>
+    <button color="accent" (click)="showTableData('intake_and_outcome_join')" mat-stroked-button class="sub-buttons" *ngIf="menuItemsClickedStatus['tables']">
+      Intake & Outcome Table
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" (click)="onMenuClicked('views')">
+        <mat-icon>table_view</mat-icon>
+        <span>Views</span>
+    </button>
+    <button color="accent" (click)="showTableData('gender_changed_list')" mat-stroked-button class="sub-buttons" *ngIf="menuItemsClickedStatus['views']">
+      Gender changed list
+    </button>
+    <button color="accent" (click)="showTableData('adoption_list')" mat-stroked-button class="sub-buttons" *ngIf="menuItemsClickedStatus['views']">
+      Adopted animals list
+    </button>
+    <button color="accent" (click)="showTableData('transfer_list')" mat-stroked-button class="sub-buttons" *ngIf="menuItemsClickedStatus['views']">
+      Transferred animals list
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button class="menu-button" (click)="onMenuClicked('audit')">
+      <mat-icon>backup_table</mat-icon>
+      <span>Audit</span>
+    </button>
+    <button color="accent" (click)="showTableData('trigger_animal_info')" mat-stroked-button class="sub-buttons" *ngIf="menuItemsClickedStatus['audit']">
+      Animal Change History
+    </button>
+    <button color="accent" (click)="showTableData('trigger_intake')" mat-stroked-button class="sub-buttons" *ngIf="menuItemsClickedStatus['audit']">
+      Intake change history
+    </button>
+    <button color="accent" (click)="showTableData('trigger_outcome')" mat-stroked-button class="sub-buttons" *ngIf="menuItemsClickedStatus['audit']">
+      Outcome change history
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-button (click)="navigate('/summary')"  class="menu-button">
+      <mat-icon>view_list</mat-icon>
+      <span>Summary</span>
+    </button>
+    <mat-divider></mat-divider>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+      <div class="content mat-elevation-z8">
+        <router-outlet></router-outlet>
+      </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
