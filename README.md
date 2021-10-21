@@ -8,7 +8,6 @@ they can find old data easily when they update wrong data by mistake.
 ## Dataset
 The dataset which we decided to use for this project was created by Austin Animal Center (AAC), which is the largest shelter in the United States that provides care and shelter to over 18,000 animals each year. The organization has accumulated the data containing intakes and outcomes of animals entering it from the beginning of October 2013. The data is available on the official City of Austin open data portal and are updated daily. The size of data is 30MB, consisting of 41 attributes and 79,672 rows. The dataset is available [here](https://www.kaggle.com/aaronschlegel/austin-animal-center-shelter-intakes-and-outcomes?select=aac_intakes_outcomes.csv). There are 3 datasets in the website, and we used ‘aac_intakes_outcomes.csv’.
 
-
 ## Database design
 The normalization process was operated with 5 steps :
 * Moving unnecessary attributes to an extra table
@@ -38,3 +37,12 @@ summary and below are the use cases for each functionality.
 
 ## Final project
 This folder contains our [final report](https://github.com/soyeon-datascience/Austin-Animal-Center-Database-SQL/blob/main/03-report/Project%20Report.pdf) and our video presentation can be found [here](https://www.youtube.com/watch?v=r1ftB8UKpVg).
+
+## Contributor
+Soyeon park, M.S. in Data Science Candidate
+Vanderbilt University
+soyeon.park@Vanderbilt.Edu
+
+Meena Muthusubramanian, M.S. in Data Science Candidate
+Vanderbilt University
+meena.muthusubramanian@vanderbilt.edu
