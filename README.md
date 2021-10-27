@@ -39,10 +39,10 @@ summary and below are the use cases for each functionality.
 This folder contains our [final report](https://github.com/soyeon-datascience/Austin-Animal-Center-Database-SQL/blob/main/03-report/Project%20Report.pdf) and our video presentation can be found [here](https://www.youtube.com/watch?v=r1ftB8UKpVg).
 
 ## Contributor
-Soyeon park, M.S. in Data Science Candidate
-Vanderbilt University
-soyeon.park@Vanderbilt.Edu
+Soyeon park, M.S. in Data Science Candidate  
+Vanderbilt University  
+soyeon.park@Vanderbilt.Edu  
 
-Meena Muthusubramanian, M.S. in Data Science Candidate
-Vanderbilt University
-meena.muthusubramanian@vanderbilt.edu
+Meena Muthusubramanian, M.S. in Data Science Candidate  
+Vanderbilt University  
+meena.muthusubramanian@vanderbilt.edu  
